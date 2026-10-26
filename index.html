@@ -4,64 +4,71 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#030303">
-  <title>ALLIN1 — Everything in One Place</title>
+  <meta name="description" content="A beginner-friendly introduction to coding and how websites work.">
+  <title>ALLIN1 — Learn to Code</title>
   <link rel="stylesheet" href="./style.css">
 </head>
-<body>
+<body class="learning-page">
   <div class="stars" aria-hidden="true"></div>
-  <aside class="sidebar">
-    <a class="sidebar-logo" href="#home" aria-label="ALLIN1 home">ALLIN1</a>
-    <nav aria-label="Main navigation">
-      <a href="#home">⌂ <span>Home</span></a>
-      <a href="#games">🎮 <span>Games</span></a>
-      <a href="#youtube">▶ <span>YouTube</span></a>
-    </nav>
-    <p class="sidebar-note">YOUR SPACE. YOUR PLAY.</p>
-  </aside>
-
   <main id="home">
-    <section class="hero">
-      <div class="eyebrow"><span class="status-dot"></span> YOUR ALL-IN-ONE DESTINATION</div>
+    <section class="hero learning-hero">
+      <div class="eyebrow"><span class="status-dot"></span> A BEGINNER'S GUIDE TO THE WEB</div>
       <h1>ALLIN1</h1>
-      <p class="hero-subtitle">EVERYTHING IN ONE PLACE.</p>
-      <a class="primary-button" href="#games">EXPLORE GAMES <span>↓</span></a>
-      <div class="scroll-hint">SCROLL TO EXPLORE</div>
+      <p class="hero-subtitle">LEARN HOW THE INTERNET IS BUILT.</p>
+      <a class="primary-button" href="#coding">DISCOVER CODING <span>↓</span></a>
+      <div class="scroll-hint">SCROLL TO LEARN</div>
     </section>
 
-    <section id="games" class="content-section">
-      <div class="section-kicker">01 / PLAY</div>
-      <h2>GAME <span>LIBRARY</span></h2>
-      <p class="section-description">Pick a game and launch it here when the game's site allows embedding.</p>
-      <div class="game-grid">
-        <button class="game-card" data-game="https://www.miniplay.com/embed/football-bros" data-name="Football Bros">
-          <span class="game-icon">🏈</span><span class="game-name">Football Bros</span><span class="game-category">SPORTS <span>↗</span></span>
-        </button>
-        <button class="game-card" data-game="https://poki.com/en/g/retro-bowl" data-name="Retro Bowl">
-          <span class="game-icon">🏆</span><span class="game-name">Retro Bowl</span><span class="game-category">FOOTBALL <span>↗</span></span>
-        </button>
-        <button class="game-card" data-game="https://driftboss.game/" data-name="Drift Boss">
-          <span class="game-icon">🏎️</span><span class="game-name">Drift Boss</span><span class="game-category">RACING <span>↗</span></span>
-        </button>
-        <button class="game-card" data-game="https://basketball-bros.io/" data-name="Basketball Bros">
-          <span class="game-icon">🏀</span><span class="game-name">Basketball Bros</span><span class="game-category">SPORTS <span>↗</span></span>
-        </button>
+    <section id="coding" class="content-section learning-content">
+      <div class="section-kicker">01 / THE BASICS</div>
+      <h2>WHAT IS <span>CODING?</span></h2>
+      <p class="section-description">Coding is writing instructions that tell a computer what to do. People use code to build websites, create apps, make games, and solve problems. A browser reads website code and turns it into the pages you see and interact with.</p>
+
+      <div class="coding-cards">
+        <article class="coding-card">
+          <div class="coding-icon">&lt;/&gt;</div>
+          <div class="card-label">THE STRUCTURE</div>
+          <h3>HTML</h3>
+          <p>HTML stands for HyperText Markup Language. It organizes the content on a webpage, like headings, paragraphs, links, and images.</p>
+          <pre><code>&lt;h1&gt;My Website&lt;/h1&gt;
+&lt;p&gt;Welcome!&lt;/p&gt;</code></pre>
+        </article>
+        <article class="coding-card">
+          <div class="coding-icon">✳</div>
+          <div class="card-label">THE DESIGN</div>
+          <h3>CSS</h3>
+          <p>CSS stands for Cascading Style Sheets. It controls how a webpage looks, including colors, fonts, spacing, and layouts.</p>
+          <pre><code>h1 {
+  color: white;
+}</code></pre>
+        </article>
+        <article class="coding-card">
+          <div class="coding-icon">{ }</div>
+          <div class="card-label">THE INTERACTION</div>
+          <h3>JavaScript</h3>
+          <p>JavaScript adds behavior to a webpage. It can respond to clicks, update information, and make interactive tools.</p>
+          <pre><code>button.onclick = () =&gt; {
+  alert("Hello!");
+};</code></pre>
+        </article>
       </div>
-      <div id="game-player" class="game-player">
-        <div class="player-placeholder"><span class="play-symbol">▶</span><h3>YOUR GAME GOES HERE</h3><p>Select a game above to try loading it in the player.</p></div>
-      </div>
-      <p class="small-note">Some game sites block embedded players. Use “Open Game” in the player header if that happens.</p>
     </section>
 
-    <section id="youtube" class="content-section youtube-section">
-      <div class="section-kicker">02 / WATCH</div>
-      <h2>YOUTUBE <span>LOUNGE</span></h2>
-      <p class="section-description">Watch videos here using YouTube's official embedded player.</p>
-      <div class="video-player">
-        <iframe src="https://www.youtube-nocookie.com/embed/jfKfPfyJRdk" title="YouTube video player" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <section class="content-section learning-content">
+      <div class="section-kicker">02 / HOW THEY WORK TOGETHER</div>
+      <h2>THREE PARTS. <span>ONE WEBSITE.</span></h2>
+      <div class="simple-steps">
+        <div><span class="step-number">01</span><p><strong>HTML</strong> gives the page its content and structure.</p></div>
+        <div><span class="step-number">02</span><p><strong>CSS</strong> makes the page look polished and easy to use.</p></div>
+        <div><span class="step-number">03</span><p><strong>JavaScript</strong> lets the page react when someone interacts with it.</p></div>
       </div>
-      <p class="small-note">Some videos don't allow embedding. YouTube playback still requires an internet connection.</p>
+      <div class="fact-panel"><span class="fact-mark">✦</span><p><strong>Did you know?</strong> Every time you visit a website, your browser reads files and displays the result. Learning the basics lets you start creating pages of your own.</p></div>
     </section>
-    <footer><span>ALLIN1</span><span>BUILT FOR THE NEXT LEVEL.</span></footer>
+
+    <footer class="learning-footer">
+      <span>ALLIN1 CODE BASICS</span>
+      <a class="footer-home-link" href="./games.html" aria-label="Open ALLIN1 games page">ALLIN1 ↗</a>
+    </footer>
   </main>
   <script src="./script.js"></script>
 </body>
