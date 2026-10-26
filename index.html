@@ -1,48 +1,68 @@
-<main id="home">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#030303">
+  <title>ALLIN1 — Everything in One Place</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <aside class="sidebar">
+    <a class="sidebar-logo" href="#home" aria-label="ALLIN1 home">ALLIN1</a>
+    <nav aria-label="Main navigation">
+      <a href="#home">⌂ <span>Home</span></a>
+      <a href="#games">🎮 <span>Games</span></a>
+      <a href="#youtube">▶ <span>YouTube</span></a>
+    </nav>
+    <p class="sidebar-note">YOUR SPACE. YOUR PLAY.</p>
+  </aside>
+
+  <main id="home">
     <section class="hero">
-        <h1>ALLIN1</h1>
-        <p>EVERYTHING IN ONE PLACE.</p>
-        <button id="explore">EXPLORE GAMES</button>
+      <div class="eyebrow"><span class="status-dot"></span> YOUR ALL-IN-ONE DESTINATION</div>
+      <h1>ALLIN1</h1>
+      <p class="hero-subtitle">EVERYTHING IN ONE PLACE.</p>
+      <a class="primary-button" href="#games">EXPLORE GAMES <span>↓</span></a>
+      <div class="scroll-hint">SCROLL TO EXPLORE</div>
     </section>
 
     <section id="games" class="content-section">
-        <h2>🎮 GAME LIBRARY</h2>
-        <p>Choose a game to play below.</p>
-
-        <div class="game-grid">
-            <button class="game-card"
-                data-game="https://www.miniplay.com/embed/football-bros">
-                🏈 Football Bros
-            </button>
-
-            <button class="game-card"
-                data-game="https://poki.com/en/g/retro-bowl">
-                🏆 Retro Bowl
-            </button>
-
-            <button class="game-card"
-                data-game="https://driftboss.game/">
-                🏎️ Drift Boss
-            </button>
-        </div>
-
-        <div id="game-player" class="game-player">
-            <h3>Select a game to start</h3>
-            <p>Your selected game will appear here if embedding is supported.</p>
-        </div>
+      <div class="section-kicker">01 / PLAY</div>
+      <h2>GAME <span>LIBRARY</span></h2>
+      <p class="section-description">Pick a game and launch it here when the game's site allows embedding.</p>
+      <div class="game-grid">
+        <button class="game-card" data-game="https://www.miniplay.com/embed/football-bros" data-name="Football Bros">
+          <span class="game-icon">🏈</span><span class="game-name">Football Bros</span><span class="game-category">SPORTS <span>↗</span></span>
+        </button>
+        <button class="game-card" data-game="https://poki.com/en/g/retro-bowl" data-name="Retro Bowl">
+          <span class="game-icon">🏆</span><span class="game-name">Retro Bowl</span><span class="game-category">FOOTBALL <span>↗</span></span>
+        </button>
+        <button class="game-card" data-game="https://driftboss.game/" data-name="Drift Boss">
+          <span class="game-icon">🏎️</span><span class="game-name">Drift Boss</span><span class="game-category">RACING <span>↗</span></span>
+        </button>
+        <button class="game-card" data-game="https://basketball-bros.io/" data-name="Basketball Bros">
+          <span class="game-icon">🏀</span><span class="game-name">Basketball Bros</span><span class="game-category">SPORTS <span>↗</span></span>
+        </button>
+      </div>
+      <div id="game-player" class="game-player">
+        <div class="player-placeholder"><span class="play-symbol">▶</span><h3>YOUR GAME GOES HERE</h3><p>Select a game above to try loading it in the player.</p></div>
+      </div>
+      <p class="small-note">Some game sites block embedded players. Use “Open Game” in the player header if that happens.</p>
     </section>
 
-    <section id="youtube" class="content-section">
-        <h2>▶ YouTube</h2>
-        <p>Watch videos directly inside ALLIN1 when embedding is enabled.</p>
-
-        <div class="video-player">
-            <iframe
-                src="https://www.youtube-nocookie.com/embed/jfKfPfyJRdk"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen>
-            </iframe>
-        </div>
+    <section id="youtube" class="content-section youtube-section">
+      <div class="section-kicker">02 / WATCH</div>
+      <h2>YOUTUBE <span>LOUNGE</span></h2>
+      <p class="section-description">Watch videos here using YouTube's official embedded player.</p>
+      <div class="video-player">
+        <iframe src="https://www.youtube-nocookie.com/embed/jfKfPfyJRdk" title="YouTube video player" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <p class="small-note">Some videos don't allow embedding. YouTube playback still requires an internet connection.</p>
     </section>
-</main>
+    <footer><span>ALLIN1</span><span>BUILT FOR THE NEXT LEVEL.</span></footer>
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>
