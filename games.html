@@ -55,11 +55,26 @@
     <section id="youtube" class="content-section youtube-section">
       <div class="section-kicker">02 / WATCH</div>
       <h2>YOUTUBE <span>LOUNGE</span></h2>
-      <p class="section-description">Watch videos here using YouTube's official embedded player.</p>
-      <div class="video-player">
-        <iframe src="https://www.youtube-nocookie.com/embed/M7lc1UVf-VE" title="YouTube embedded player demo" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <p class="section-description">Search YouTube for videos, music, tutorials, gaming, and more. Results open on YouTube.</p>
+      <form class="youtube-search" action="https://www.youtube.com/results" method="get" target="_blank" rel="noopener noreferrer">
+        <label class="sr-only" for="youtube-query">Search YouTube</label>
+        <span class="youtube-search-icon" aria-hidden="true">⌕</span>
+        <input id="youtube-query" type="search" name="search_query" placeholder="Search videos on YouTube..." required>
+        <button type="submit">SEARCH ↗</button>
+      </form>
+      <div class="youtube-shortcuts" aria-label="Popular YouTube searches">
+        <span>QUICK SEARCHES</span>
+        <a href="https://www.youtube.com/results?search_query=gaming" target="_blank" rel="noopener noreferrer">🎮 Gaming</a>
+        <a href="https://www.youtube.com/results?search_query=music" target="_blank" rel="noopener noreferrer">♫ Music</a>
+        <a href="https://www.youtube.com/results?search_query=basketball+highlights" target="_blank" rel="noopener noreferrer">🏀 Basketball</a>
+        <a href="https://www.youtube.com/results?search_query=coding+tutorials" target="_blank" rel="noopener noreferrer">⌨ Coding</a>
       </div>
-      <p class="small-note">If the embedded player is unavailable, <a href="https://www.youtube.com/watch?v=M7lc1UVf-VE" target="_blank" rel="noopener noreferrer">open the video on YouTube ↗</a>. Playback requires an internet connection.</p>
+      <div class="youtube-home-panel">
+        <div class="youtube-panel-logo"><span class="youtube-play">▶</span> YouTube <span class="youtube-panel-tag">SEARCH</span></div>
+        <p>Find something to watch. Type a search above or open YouTube's home page.</p>
+        <a class="youtube-open-link" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">OPEN YOUTUBE HOME ↗</a>
+      </div>
+      <p class="small-note">YouTube search and videos open in a new tab. Availability depends on your internet connection and network settings.</p>
     </section>
     <footer><a class="footer-home-link" href="./index.html">← BACK TO CODING</a><span>ALLIN1 GAMES</span></footer>
   </main>
