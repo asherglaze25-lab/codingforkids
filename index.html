@@ -1,35 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALLIN1</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+<main id="home">
+    <section class="hero">
+        <h1>ALLIN1</h1>
+        <p>EVERYTHING IN ONE PLACE.</p>
+        <button id="explore">EXPLORE GAMES</button>
+    </section>
 
-<body>
+    <section id="games" class="content-section">
+        <h2>🎮 GAME LIBRARY</h2>
+        <p>Choose a game to play below.</p>
 
-    <div class="stars"></div>
+        <div class="game-grid">
+            <button class="game-card"
+                data-game="https://www.miniplay.com/embed/football-bros">
+                🏈 Football Bros
+            </button>
 
-    <aside class="sidebar">
-        <h2 class="sidebar-logo">ALLIN1</h2>
+            <button class="game-card"
+                data-game="https://poki.com/en/g/retro-bowl">
+                🏆 Retro Bowl
+            </button>
 
-        <nav>
-            <a href="#home">⌂ Home</a>
-            <a href="#games">🎮 Games</a>
-            <a href="#youtube">▶ YouTube</a>
-        </nav>
-    </aside>
+            <button class="game-card"
+                data-game="https://driftboss.game/">
+                🏎️ Drift Boss
+            </button>
+        </div>
 
-    <main id="home">
-        <section class="hero">
-            <h1>ALLIN1</h1>
-            <p>EVERYTHING IN ONE PLACE.</p>
-            <button id="explore">EXPLORE</button>
-        </section>
-    </main>
+        <div id="game-player" class="game-player">
+            <h3>Select a game to start</h3>
+            <p>Your selected game will appear here if embedding is supported.</p>
+        </div>
+    </section>
 
-    <script src="script.js"></script>
+    <section id="youtube" class="content-section">
+        <h2>▶ YouTube</h2>
+        <p>Watch videos directly inside ALLIN1 when embedding is enabled.</p>
 
-</body>
-</html>
+        <div class="video-player">
+            <iframe
+                src="https://www.youtube-nocookie.com/embed/jfKfPfyJRdk"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
+</main>
