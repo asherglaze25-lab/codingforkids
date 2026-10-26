@@ -98,3 +98,42 @@ footer span:first-child{color:#ddd;font-weight:900}
 .youtube-open-link{display:inline-block;margin-top:3px;padding:12px 15px;border:1px solid #666;border-radius:6px;color:#fff;text-decoration:none;font-size:10px;letter-spacing:1.5px}
 .youtube-open-link:hover{background:#fff;color:#000}
 @media(max-width:500px){.youtube-search{gap:8px;padding-left:12px}.youtube-search button{padding:12px 10px;font-size:9px}.youtube-search input{font-size:12px}.youtube-shortcuts{gap:7px}.youtube-home-panel{padding:21px}}
+
+
+/* In-page YouTube search and player */
+.youtube-search{display:flex;align-items:center;gap:12px;max-width:850px;margin:28px 0 18px;padding:7px 8px 7px 18px;border:1px solid #383838;border-radius:999px;background:#0b0b0b;transition:border-color .2s,box-shadow .2s}
+.youtube-search:focus-within{border-color:#aaa;box-shadow:0 0 22px rgba(255,255,255,.07)}
+.youtube-search-icon{font-size:27px;color:#888;line-height:1}
+.youtube-search input,.youtube-key-form input{flex:1;min-width:0;background:transparent;border:0;outline:0;color:#fff;font:inherit;font-size:14px;padding:12px 0}
+.youtube-search input::placeholder,.youtube-key-form input::placeholder{color:#777}
+.youtube-search button,.youtube-key-form button{border:1px solid #eee;border-radius:999px;background:#fff;color:#050505;padding:13px 18px;font-size:10px;font-weight:800;letter-spacing:1px;cursor:pointer;white-space:nowrap}
+.youtube-shortcuts{display:flex;flex-wrap:wrap;align-items:center;gap:9px;margin:20px 0 25px}
+.youtube-shortcuts>span{font-size:9px;letter-spacing:2px;color:#777;margin-right:5px}
+.youtube-shortcuts button{display:inline-block;padding:10px 14px;border:1px solid #292929;border-radius:999px;background:#0b0b0b;color:#ddd;text-decoration:none;font-size:12px;cursor:pointer}
+.youtube-shortcuts button:hover{border-color:#aaa;background:#171717;color:#fff}
+.youtube-status{max-width:850px;margin:12px 0 20px;color:#999;font-size:12px;line-height:1.7}
+.youtube-results{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
+.youtube-result{min-width:0;border:1px solid #292929;border-radius:12px;overflow:hidden;background:#090909;color:#fff;text-align:left;cursor:pointer;transition:transform .2s,border-color .2s}
+.youtube-result:hover{transform:translateY(-3px);border-color:#888}
+.youtube-thumbnail{position:relative;aspect-ratio:16/9;background:#111;overflow:hidden}
+.youtube-thumbnail img{display:block;width:100%;height:100%;object-fit:cover}
+.youtube-thumbnail:after{content:"▶";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:42px;height:30px;border-radius:8px;background:rgba(0,0,0,.8);color:white;font-size:14px}
+.youtube-result-copy{padding:13px}
+.youtube-result-title{font-size:13px;line-height:1.5;font-weight:700;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.youtube-result-channel{margin-top:8px;font-size:11px;color:#888;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.youtube-watch{margin-top:25px;max-width:1000px;border:1px solid #292929;border-radius:12px;overflow:hidden;background:#070707}
+.youtube-watch[hidden]{display:none}
+.youtube-watch-header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px}
+.youtube-watch-header h3{font-size:15px;line-height:1.5;margin-top:9px}
+.youtube-back-button{flex-shrink:0;border:1px solid #444;background:#111;color:#fff;border-radius:6px;padding:10px 12px;font-size:10px;letter-spacing:1px;cursor:pointer}
+.youtube-back-button:hover{border-color:#aaa}
+.youtube-video-frame{aspect-ratio:16/9;background:#000}
+.youtube-video-frame iframe{display:block;width:100%;height:100%;border:0}
+.youtube-setup{max-width:850px;margin-top:26px;border-top:1px solid #292929;padding-top:18px;color:#aaa;font-size:12px}
+.youtube-setup summary{cursor:pointer;color:#ddd;letter-spacing:.5px}
+.youtube-setup p{margin-top:13px;line-height:1.7}
+.youtube-key-form{display:flex;flex-wrap:wrap;align-items:center;gap:9px;margin-top:12px;padding:7px 8px 7px 14px;border:1px solid #333;border-radius:8px;background:#0b0b0b}
+.youtube-key-form input{font-size:12px}
+.youtube-key-form .youtube-clear-key{background:transparent;color:#ddd;border-color:#444}
+@media(max-width:900px){.youtube-results{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.youtube-results{grid-template-columns:1fr}.youtube-search{gap:8px;padding-left:12px}.youtube-search button{padding:12px 10px}.youtube-search input{font-size:12px}.youtube-watch-header{align-items:flex-start;flex-direction:column}.youtube-key-form{border-radius:10px}.youtube-key-form input{flex-basis:100%}}
