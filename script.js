@@ -36,3 +36,12 @@ gameCards.forEach((card) => {
     gamePlayer.scrollIntoView({ behavior: "smooth", block: "start" });
   });
 });
+
+
+// Keyboard shortcut: Ctrl+E opens the separate ALLIN1 games page.
+document.addEventListener("keydown", (event) => {
+  if (event.ctrlKey && event.key.toLowerCase() === "e") {
+    event.preventDefault();
+    window.location.href = "./games.html";
+  }
+});
