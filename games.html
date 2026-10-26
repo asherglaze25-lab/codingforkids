@@ -55,26 +55,48 @@
     <section id="youtube" class="content-section youtube-section">
       <div class="section-kicker">02 / WATCH</div>
       <h2>YOUTUBE <span>LOUNGE</span></h2>
-      <p class="section-description">Search YouTube for videos, music, tutorials, gaming, and more. Results open on YouTube.</p>
-      <form class="youtube-search" action="https://www.youtube.com/results" method="get" target="_blank" rel="noopener noreferrer">
-        <label class="sr-only" for="youtube-query">Search YouTube</label>
+      <p class="section-description">Search videos and watch them right here without leaving ALLIN1.</p>
+
+      <form id="youtube-search-form" class="youtube-search">
+        <label class="sr-only" for="youtube-query">Search YouTube videos</label>
         <span class="youtube-search-icon" aria-hidden="true">⌕</span>
-        <input id="youtube-query" type="search" name="search_query" placeholder="Search videos on YouTube..." required>
-        <button type="submit">SEARCH ↗</button>
+        <input id="youtube-query" type="search" placeholder="Search videos..." autocomplete="off" required>
+        <button type="submit">SEARCH</button>
       </form>
-      <div class="youtube-shortcuts" aria-label="Popular YouTube searches">
+
+      <div class="youtube-shortcuts" aria-label="Quick video searches">
         <span>QUICK SEARCHES</span>
-        <a href="https://www.youtube.com/results?search_query=gaming" target="_blank" rel="noopener noreferrer">🎮 Gaming</a>
-        <a href="https://www.youtube.com/results?search_query=music" target="_blank" rel="noopener noreferrer">♫ Music</a>
-        <a href="https://www.youtube.com/results?search_query=basketball+highlights" target="_blank" rel="noopener noreferrer">🏀 Basketball</a>
-        <a href="https://www.youtube.com/results?search_query=coding+tutorials" target="_blank" rel="noopener noreferrer">⌨ Coding</a>
+        <button type="button" data-youtube-search="gaming">🎮 Gaming</button>
+        <button type="button" data-youtube-search="music">♫ Music</button>
+        <button type="button" data-youtube-search="basketball highlights">🏀 Basketball</button>
+        <button type="button" data-youtube-search="coding tutorials">⌨ Coding</button>
       </div>
-      <div class="youtube-home-panel">
-        <div class="youtube-panel-logo"><span class="youtube-play">▶</span> YouTube <span class="youtube-panel-tag">SEARCH</span></div>
-        <p>Find something to watch. Type a search above or open YouTube's home page.</p>
-        <a class="youtube-open-link" href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">OPEN YOUTUBE HOME ↗</a>
-      </div>
-      <p class="small-note">YouTube search and videos open in a new tab. Availability depends on your internet connection and network settings.</p>
+
+      <div id="youtube-status" class="youtube-status" role="status" aria-live="polite">Search setup needed before live video results can load.</div>
+      <div id="youtube-results" class="youtube-results"></div>
+
+      <section id="youtube-watch" class="youtube-watch" hidden aria-label="Video player">
+        <div class="youtube-watch-header">
+          <div><span class="youtube-panel-tag">NOW PLAYING</span><h3 id="youtube-watch-title">Select a video</h3></div>
+          <button id="youtube-back" class="youtube-back-button" type="button">← BACK TO RESULTS</button>
+        </div>
+        <div class="youtube-video-frame">
+          <iframe id="youtube-player" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </section>
+
+      <details class="youtube-setup">
+        <summary>Search setup (YouTube API key)</summary>
+        <p>Live search needs a YouTube Data API key. Add your key here for this browser session only; it won't be written into the public website files.</p>
+        <form id="youtube-key-form" class="youtube-key-form">
+          <label class="sr-only" for="youtube-api-key">YouTube Data API key</label>
+          <input id="youtube-api-key" type="password" placeholder="Paste your YouTube API key" autocomplete="off" spellcheck="false">
+          <button type="submit">USE KEY</button>
+          <button id="youtube-clear-key" type="button" class="youtube-clear-key">CLEAR</button>
+        </form>
+        <p class="small-note">For safety, restrict the key to this site's HTTP referrer and enable only YouTube Data API v3 in Google Cloud. Never commit an unrestricted API key to GitHub.</p>
+      </details>
+      <p class="small-note">Videos play inside ALLIN1 when the creator allows embedding. Some videos may disable embedded playback.</p>
     </section>
     <footer><a class="footer-home-link" href="./index.html">← BACK TO CODING</a><span>ALLIN1 GAMES</span></footer>
   </main>
