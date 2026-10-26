@@ -1,41 +1,38 @@
-```javascript
-const exploreButton = document.getElementById("explore");
+const exploreButton = document.querySelector(".primary-button");
 const gamePlayer = document.getElementById("game-player");
 const gameCards = document.querySelectorAll(".game-card");
 
-exploreButton.addEventListener("click", () => {
-    document.getElementById("games").scrollIntoView({
-        behavior: "smooth"
-    });
+exploreButton?.addEventListener("click", () => {
+  document.getElementById("games")?.scrollIntoView({ behavior: "smooth" });
 });
 
 gameCards.forEach((card) => {
-    card.addEventListener("click", () => {
-        const gameUrl = card.dataset.game;
-        const gameName = card.textContent.trim();
+  card.addEventListener("click", () => {
+    const gameUrl = card.dataset.game;
+    const gameName = card.dataset.name || card.textContent.trim();
 
-        gamePlayer.innerHTML = `
-            <div class="player-header">
-                <h3>${gameName}</h3>
-                <a href="${gameUrl}"
-                   target="_blank"
-                   rel="noopener noreferrer">
-                    Open Game ↗
-                </a>
-            </div>
+    const header = document.createElement("div");
+    header.className = "player-header";
 
-            <iframe
-                src="${gameUrl}"
-                title="${gameName}"
-                allowfullscreen
-                loading="lazy">
-            </iframe>
-        `;
+    const heading = document.createElement("h3");
+    heading.textContent = gameName;
 
-        gamePlayer.scrollIntoView({
-            behavior: "smooth",
-            block: "start"
-        });
-    });
+    const openLink = document.createElement("a");
+    openLink.href = gameUrl;
+    openLink.target = "_blank";
+    openLink.rel = "noopener noreferrer";
+    openLink.textContent = "Open Game ↗";
+
+    header.append(heading, openLink);
+
+    const frame = document.createElement("iframe");
+    frame.src = gameUrl;
+    frame.title = gameName;
+    frame.allowFullscreen = true;
+    frame.loading = "lazy";
+    frame.referrerPolicy = "strict-origin-when-cross-origin";
+
+    gamePlayer.replaceChildren(header, frame);
+    gamePlayer.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
 });
-```
